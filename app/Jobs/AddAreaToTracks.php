@@ -9,7 +9,7 @@ class AddAreaToTracks extends AbstractProcessorJob
   public function process($input)
   {
     //TODO: implements
-    sleep(15);
-    return [1, 2];
+    sleep(5);
+    return '[1, 2]';
   }
 }
