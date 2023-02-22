@@ -4,11 +4,11 @@ Webmapp's Prc features
 
 ## Laravel Prc features Project based on Nova 4
 
-Prc features basato su Laravel 9, php 8.1 e posgres + postgis. Supporto locale per web server php ed xdebug.
+Prc features basato su Laravel 10, php 8.1 e posgres + postgis. Supporto locale per web server php ed xdebug.
 
 ## INSTALL
 
-First of all install the [GEOBOX](https://github.com/webmappsrl/geobox) repo and configure the ALIASES command. 
+First of all install the [GEOBOX](https://github.com/webmappsrl/geobox) repo and configure the ALIASES command.
 
 ```sh
 git clone git@github.com:webmappsrl/prc-features.git
