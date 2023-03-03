@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name');
-            $table->text('excerpt');
-            $table->text('description');
-            $table->string('identifier');
-            $table->string('osm_id');
-            $table->string('feature_image');
-            $table->multiPolygon('geometry');
+            $table->string('name')->nullable();
+            $table->text('excerpt')->nullable();
+            $table->text('description')->nullable();
+            $table->string('identifier')->nullable();
+            $table->string('osm_id')->nullable();
+            $table->string('feature_image')->nullable();
+            $table->multiPolygon('geometry')->nullable();
         });
     }
 
