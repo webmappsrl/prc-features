@@ -17,7 +17,12 @@ class AreaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'excerpt' => $this->faker->paragraph(),
+            'description' => $this->faker->paragraphs(3, true),
+            'identifier' => $this->faker->unique()->word(),
+            'osm_id' => $this->faker->unique()->randomNumber(),
+            'feature_image' => $this->faker->imageUrl(),
         ];
     }
 }
