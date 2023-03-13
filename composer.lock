@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b72b3664698eb772cb95f6c16db3f066",
+    "content-hash": "764e81d06f7719cb056388038c7e2579",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -6944,8 +6944,53 @@
             "time": "2022-06-03T18:03:27+00:00"
         },
         {
+            "name": "wm/map-multi-polygon",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webmappsrl/map-multi-polygon.git",
+                "reference": "577cc1aa89dcc33d04cd0b3a1c3ba3305cf7f1c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webmappsrl/map-multi-polygon/zipball/577cc1aa89dcc33d04cd0b3a1c3ba3305cf7f1c6",
+                "reference": "577cc1aa89dcc33d04cd0b3a1c3ba3305cf7f1c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Wm\\MapMultiPolygon\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Wm\\MapMultiPolygon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/webmappsrl/map-multi-polygon/issues",
+                "source": "https://github.com/webmappsrl/map-multi-polygon/tree/v0.0.1"
+            },
+            "time": "2022-09-08T08:15:46+00:00"
+        },
+        {
             "name": "wm/wm-internal",
-            "version": "dev-main",
+            "version": "dev-feature/Add_wm-multi-polygon_package",
             "dist": {
                 "type": "path",
                 "url": "./wm-internal",
