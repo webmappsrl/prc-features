@@ -8,6 +8,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Hidden;
 use Laravel\Nova\Fields\Markdown;
+use Wm\MapMultiPolygon\MapMultiPolygon;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Area extends Resource
@@ -60,8 +61,11 @@ class Area extends Resource
                 ->onlyOnDetail(),
             Text::make('Feature image', 'feature_image')
                 ->nullable(),
-            Hidden::make('Geometry', 'geometry')
-                ->nullable(),
+            MapMultiPolygon::make('geometry')->withMeta([
+                'center' => ['42.795977075', '10.326813853'],
+                'attribution' => '<a href="https://webmapp.it/">Webmapp</a> contributors',
+            ])
+                ->hideFromIndex(),
         ];
     }
 
