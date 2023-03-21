@@ -23,6 +23,10 @@ class Area extends Model
         'osm_id',
         'feature_image',
         'geometry',
+        'import_method',
+        'source_id',
+        'admin_level'
+
     ];
 
     /**
