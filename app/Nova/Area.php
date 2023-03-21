@@ -8,7 +8,9 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Hidden;
 use Laravel\Nova\Fields\Markdown;
+use Datomatic\NovaMarkdownTui\MarkdownTui;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Datomatic\NovaMarkdownTui\Enums\EditorType;
 
 class Area extends Resource
 {
@@ -48,11 +50,12 @@ class Area extends Resource
             Text::make('Name', 'name')
                 ->rules('required')
                 ->nullable(),
-            Text::make('Excerpt', 'excerpt')
-                ->nullable(),
-            Markdown::make('Description', 'description')
+            MarkdownTui::make('Excerpt')
                 ->nullable()
-                ->alwaysShow(),
+                ->initialEditType(EditorType::WYSIWYG),
+            MarkdownTui::make('Description')
+                ->nullable()
+                ->initialEditType(EditorType::WYSIWYG),
             Text::make('Identifier', 'identifier')
                 ->nullable(),
             Text::make('Osm id', 'osm_id')
