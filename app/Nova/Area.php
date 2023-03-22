@@ -63,6 +63,7 @@ class Area extends Resource
                     ->nullable()
                     ->initialEditType(EditorType::WYSIWYG),
             ]),
+            Text::make('Geohub ID', 'geohub_id')->onlyOnDetail(),
             Text::make('Identifier', 'identifier')
                 ->nullable(),
             Text::make('Osm id', 'osm_id')
