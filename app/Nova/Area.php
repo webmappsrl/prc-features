@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Hidden;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Markdown;
 use Wm\MapMultiPolygon\MapMultiPolygon;
+use Datomatic\NovaMarkdownTui\MarkdownTui;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Datomatic\NovaMarkdownTui\Enums\EditorType;
+use Kongulov\NovaTabTranslatable\NovaTabTranslatable;
+
+
 
 class Area extends Resource
 {
@@ -46,26 +52,37 @@ class Area extends Resource
     {
         return [
             ID::make()->sortable(),
-            Text::make('Name', 'name')
-                ->rules('required')
-                ->nullable(),
-            Text::make('Excerpt', 'excerpt')
-                ->nullable(),
-            Markdown::make('Description', 'description')
-                ->nullable()
-                ->alwaysShow(),
+            NovaTabTranslatable::make([
+                Text::make(__('name'), 'name'),
+                MarkdownTui::make(__('description'), 'description')
+                    ->hideFromIndex()
+                    ->nullable()
+                    ->initialEditType(EditorType::WYSIWYG),
+                MarkdownTui::make(__('excerpt'), 'excerpt')
+                    ->hideFromIndex()
+                    ->nullable()
+                    ->initialEditType(EditorType::WYSIWYG),
+            ]),
+            Text::make('Geohub ID', 'geohub_id')->onlyOnDetail(),
             Text::make('Identifier', 'identifier')
                 ->nullable(),
             Text::make('Osm id', 'osm_id')
                 ->nullable()
                 ->onlyOnDetail(),
             Text::make('Feature image', 'feature_image')
-                ->nullable(),
+                ->nullable()
+                ->onlyOnDetail(),
             MapMultiPolygon::make('geometry')->withMeta([
                 'center' => ['42.795977075', '10.326813853'],
                 'attribution' => '<a href="https://webmapp.it/">Webmapp</a> contributors',
             ])
                 ->hideFromIndex(),
+            Text::make('import_method')
+                ->onlyOnDetail(),
+            Number::make('source_id')
+                ->onlyOnDetail(),
+            Number::make('admin_level')
+                ->onlyOnDetail(),
         ];
     }
 
