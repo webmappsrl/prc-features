@@ -25,7 +25,8 @@ class Area extends Model
         'geometry',
         'import_method',
         'source_id',
-        'admin_level'
+        'admin_level',
+        'geohub_id'
 
     ];
 

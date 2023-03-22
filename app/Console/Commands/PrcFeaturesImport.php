@@ -47,7 +47,7 @@ class PrcFeaturesImport extends Command
             $count++;
             $this->info('Importing taxonomy ' . $taxonomy . ' (' . $count . '/' . count($taxonomyIds) . ')');
 
-            if (Area::where('osm_id', $taxonomy)->exists()) {
+            if (Area::where('geohub_id', $taxonomy)->exists()) {
                 $this->info('Taxonomy ' . $taxonomy . ' already exists');
                 continue;
             }
@@ -80,7 +80,7 @@ class PrcFeaturesImport extends Command
                     'source_id' => $elementProperties['source_id'],
                     'admin_level' => $elementProperties['admin_level'],
                     'feature_image' => $elementFeatureImage,
-                    'osm_id' => $elementProperties['id'],
+                    'geohub_id' => $elementProperties['id'],
                     'geometry' => $elementGeometry,
                 ]
             );
