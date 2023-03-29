@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2cfd6a120e5dcd528e7db8684fcec96f",
+    "content-hash": "11982ee2d73a3fab44a2e39233e76bec",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -7059,16 +7059,16 @@
         },
         {
             "name": "wm/map-multi-polygon",
-            "version": "v0.0.2",
+            "version": "V0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmappsrl/map-multi-polygon.git",
-                "reference": "b3eb2348740e7000e4cee1f4094a2be6acafa158"
+                "reference": "64a10c23929462f71fb2d4ba82a3337da8640956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmappsrl/map-multi-polygon/zipball/b3eb2348740e7000e4cee1f4094a2be6acafa158",
-                "reference": "b3eb2348740e7000e4cee1f4094a2be6acafa158",
+                "url": "https://api.github.com/repos/webmappsrl/map-multi-polygon/zipball/64a10c23929462f71fb2d4ba82a3337da8640956",
+                "reference": "64a10c23929462f71fb2d4ba82a3337da8640956",
                 "shasum": ""
             },
             "require": {
@@ -7098,13 +7098,13 @@
             ],
             "support": {
                 "issues": "https://github.com/webmappsrl/map-multi-polygon/issues",
-                "source": "https://github.com/webmappsrl/map-multi-polygon/tree/v0.0.2"
+                "source": "https://github.com/webmappsrl/map-multi-polygon/tree/V0.0.3"
             },
-            "time": "2023-03-21T14:18:25+00:00"
+            "time": "2023-03-29T06:53:45+00:00"
         },
         {
             "name": "wm/wm-internal",
-            "version": "dev-feature/Import_Areas_from_TaxonomyWheres",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./wm-internal",
